@@ -6,7 +6,22 @@ To learn Python/Flask by attempting to build a single page app with Flask and Vu
 
 ### Concept Inspo
 
-Want to explore the option of matching with a pair by way of the cosmos. Why not? ¯\_(ツ)_/¯
+Want to explore the option of matching with a pair by way of the cosmos. Why not?  ¯\_(ツ)_/¯
+
+
+## Setup
+
+### Client dependencies
+
+`nvm v0.35.3`
+`node v12.8.0`
+
+`npm install chromedriver`
+
+Follow instructions in [/client/README.md](client/README.md)
+
+
+### Server dependencies
 
 ---
 
