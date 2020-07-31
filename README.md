@@ -12,32 +12,55 @@ Want to explore the option of matching with a pair by way of the cosmos. Why not
 
 ### Virtual environment
 
-Install virtualenv (venv), run `python3 -m venv env`
+#### Install virtualenv (venv) 
+```
+python3 -m venv
+```
 
-Create venv, run `virtualenv venv`
+#### Create venv
+```
+virtualenv venv
+```
 
 ### Client dependencies
 
-`nvm v0.35.3`
+```
+nvm v0.35.3
 
-`node v12.8.0`
+node v12.8.0
+```
 
-Install chromedriver, run `npm install chromedriver`
+#### Install chromedriver
+```
+npm install chromedriver
+```
 
-Follow instructions in [/client/README.md](client/README.md)
+#### Follow instructions in [/client/README.md](client/README.md)
 
 ### Server dependencies
 
-`Flask 1.0.2`
-`Flask-Cors 3.0.7`
+```
+Flask 1.0.2
 
-Install Flask, run `pip install Flask==1.0.2 Flask-Cors==3.0.7`
+Flask-Cors 3.0.7
+```
+
+#### Install Flask 
+```
+pip install Flask==1.0.2 Flask-Cors==3.0.7
+```
 
 ## Workflow commands
 
-Activate venv, run `source venv/bin/activate`
+#### Activate venv
+```
+source venv/bin/activate
+```
 
-Deactivate venv, run `deactivate`
+#### Deactivate venv
+```
+deactivate
+```
 
 # License
 
