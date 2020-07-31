@@ -1,8 +1,1 @@
 .DS_Store
-
-server/env/
-server/venv/
-
-env/
-venv/
-__pycache__
