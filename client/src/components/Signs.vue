@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <p>{{ msg }}</p>
+    <tr v-for="(sign, index) in signs" :key="index">
+      <td>{{ sign.name.toUpperCase() }}</td>
+      <td>{{ sign.modality }}</td>
+      <td>{{ sign.element }}</td>
+    </tr>
   </div>
 </template>
 
@@ -8,18 +12,18 @@
 import axios from 'axios';
 
 export default {
-  name: 'Ping',
+  name: 'Signs',
   data() {
     return {
-      msg: '',
+      signs: [],
     };
   },
   methods: {
-    getMessage() {
-      const path = 'http://localhost:5000/ping';
+    getSigns() {
+      const path = 'http://localhost:5000/signs';
       axios.get(path)
         .then((res) => {
-          this.msg = res.data;
+          this.signs = res.data.signs;
         })
         .catch((error) => {
           // eslint-disable-next-line
@@ -28,7 +32,7 @@ export default {
     },
   },
   created() {
-    this.getMessage();
+    this.getSigns();
   },
 };
 </script>
