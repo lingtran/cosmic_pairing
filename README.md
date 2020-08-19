@@ -8,21 +8,21 @@ To learn Python/Flask by attempting to build a single page app with Flask and Vu
 
 Want to explore the option of matching with a pair by way of the cosmos. Why not?  ¯\_(ツ)_/¯
 
+---
+
 ## Setup
 
-### Virtual environment
+### Server-side dependencies
 
-#### Install virtualenv (venv) 
 ```
-python3 -m venv
-```
+Flask 1.0.2
 
-#### Create venv
-```
-virtualenv venv
+Flask-Cors 3.0.7
 ```
 
-### Client dependencies
+*Follow setup instructions in [/server/README.md](server/README.md)*
+
+### Client-side dependencies
 
 ```
 nvm v0.35.3
@@ -35,33 +35,9 @@ node v12.8.0
 npm install chromedriver
 ```
 
-#### Follow instructions in [/client/README.md](client/README.md)
+*Follow setup instructions in [/client/README.md](client/README.md)*
 
-### Server dependencies
-
-```
-Flask 1.0.2
-
-Flask-Cors 3.0.7
-```
-
-#### Install Flask 
-```
-pip install Flask==1.0.2 Flask-Cors==3.0.7
-```
-
-## Workflow commands
-
-#### Activate venv
-```
-source venv/bin/activate
-```
-
-#### Deactivate venv
-```
-deactivate
-```
-
+---
 # License
 
 Copyright 2020 RabbitRabbit Studio.
