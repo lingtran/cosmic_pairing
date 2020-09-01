@@ -15,6 +15,10 @@ Want to explore the option of matching with a pair by way of the cosmos. Why not
 ### Server-side dependencies
 
 ```
+Python 3.6.9
+
+pyenv 1.2.18
+
 Flask 1.0.2
 
 Flask-Cors 3.0.7

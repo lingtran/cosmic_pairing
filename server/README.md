@@ -2,10 +2,30 @@
 
 ## Project setup
 
-### Install Flask 
+### Install pyenv and Python
+1. Install pyenv, a Python version manager, to be kind to your future self. Prerequisite installation of [Homebrew](https://brew.sh/), then run:
 ```
-pip install Flask==1.0.2 Flask-Cors==3.0.7
+brew install pyenv
 ```
+* More [pyenv documentation here](https://github.com/pyenv/pyenv)
+
+2. Install Python version specified in [.python-version](./.python-version) file:
+```
+pyenv install <specified version>
+```
+
+### Install Dependencies 
+```
+pip install -r requirements.txt
+```
+
+### Set environment variables
+1.  Copy example env file
+```
+cp .env.example .env
+```
+
+2.  Then assign values to variables in `.env` file.
 
 ### Install virtualenv (venv) 
 ```
@@ -32,7 +52,7 @@ deactivate
 ```
 
 ### Start app
-For now, manually export `FLASK_APP` and `FLASK_ENV` variables before running:
+From root server directory, run:
 ```
 flask run
 ```
