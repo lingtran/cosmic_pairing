@@ -30,11 +30,6 @@ nvm v0.35.3
 node v12.8.0
 ```
 
-#### Install chromedriver
-```
-npm install chromedriver
-```
-
 *Follow setup instructions in [/client/README.md](client/README.md)*
 
 ---

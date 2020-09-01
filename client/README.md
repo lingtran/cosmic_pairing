@@ -1,6 +1,13 @@
 # cosmic-pairing client
 
 ## Project setup
+
+### Install chromedriver
+```
+npm install chromedriver
+```
+
+### Install dependencies
 ```
 npm install
 ```
