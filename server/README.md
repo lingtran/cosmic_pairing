@@ -16,7 +16,7 @@ pyenv install <specified version>
 
 ### Install Dependencies 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### Set environment variables
@@ -29,7 +29,8 @@ cp .env.example .env
 
 ### Install virtualenv (venv) 
 ```
-python3 -m venv
+pip3 install virtualenv
+python3 -m venv venv
 ```
 
 ### Create venv
