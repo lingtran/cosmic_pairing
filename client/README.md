@@ -2,6 +2,14 @@
 
 ## Project setup
 
+### Install Node Version Manager (nvm)
+This project uses `nvm`, which can be installed [here](https://github.com/nvm-sh/nvm).
+
+### Set appropriate `node` version specified in `.nvmrc`
+```
+nvm use
+```
+
 ### Install chromedriver
 ```
 npm install chromedriver
