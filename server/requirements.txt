@@ -1,9 +1,8 @@
 black
 flake8
-Flask==1.0.2
+Flask==2.0.3
 Flask-Cors==3.0.7
-py2neo
-neo4j==4.2.1
-neo4j-driver
+flask_sqlalchemy
 pre-commit
+psycopg2
 python-dotenv

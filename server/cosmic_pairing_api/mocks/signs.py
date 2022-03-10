@@ -1,5 +1,5 @@
-from cosmic_pairing_api.utils.enums.element import Element
-from cosmic_pairing_api.utils.enums.modality import Modality
+from ..utils.enums.element import Element
+from ..utils.enums.modality import Modality
 
 SIGNS = [
     {
