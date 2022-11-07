@@ -5,4 +5,5 @@ Flask-Cors==3.0.7
 flask_sqlalchemy
 pre-commit
 psycopg2
+psycopg2-binary
 python-dotenv

@@ -8,6 +8,9 @@ conn = psycopg2.connect(
     password=os.getenv('DB_PASSWORD')
 )
 
+print("db name: {name}".format(name=os.getenv('DB_NAME')))
+print("db user: {name}".format(name=os.getenv('DB_USERNAME')))
+
 cur = conn.cursor()
 
 cur.execute('DROP TABLE IF EXISTS helloworld;')
