@@ -1,7 +1,7 @@
 black
 flake8
 Flask==2.0.3
-Flask-Cors==3.0.7
+Flask-Cors==3.0.9
 flask_sqlalchemy
 pre-commit
 psycopg2
