@@ -26,8 +26,9 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm start  // runs on [http://localhost:3000](http://localhost:3000)
+npm start
 ```
+Runs on [http://localhost:3000](http://localhost:3000)
 
 ### Compiles and minifies for production
 ```
