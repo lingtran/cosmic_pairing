@@ -65,7 +65,7 @@ def create_app(test_config=None):
         return jsonify({
             "code": 200,
             "status": "success",
-            "results": hello
+            "result": hello[0][1]
         })
     
     @app.teardown_appcontext
