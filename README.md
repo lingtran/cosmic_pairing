@@ -2,7 +2,7 @@
 
 ### Intention
 
-To learn Python/Flask by attempting to build a single page app with Flask and Vue.js.
+To learn Python/Flask and React by attempting to build a progressive web app.
 
 ### Concept Inspo
 
@@ -31,7 +31,7 @@ Flask-Cors 3.0.7
 ```
 nvm v0.35.3
 
-node v12.8.0
+node v16.0.0
 ```
 
 *Follow setup instructions in [/client/README.md](client/README.md)*
