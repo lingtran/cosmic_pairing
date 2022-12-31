@@ -16,9 +16,9 @@ type Sign = {
     element: string;
 };
 
-type Signs = Sign[];
+type SignsResponse = Sign[];
 
-function renderSigns(signs: Signs) {
+function renderSigns(signs: SignsResponse) {
     return (
         <>            {
             signs.map((sign: Sign) => {
@@ -44,7 +44,7 @@ function renderSigns(signs: Signs) {
 function Signs() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [signs, setSigns] = useState<Signs>([]);
+    const [signs, setSigns] = useState<SignsResponse>([]);
 
     useEffect(() => {
         fetch("http://localhost:5000/signs")
