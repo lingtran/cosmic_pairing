@@ -16,7 +16,7 @@ function App() {
       <div>
         <BrowserRouter>
           <Routes>
-            <Route path="/hello" element={<HelloWorld />} />
+            <Route index path="/" element={<HelloWorld />} />
             <Route path="/ping" element={<Ping />} />
             <Route path="/signs" element={<Signs />} />
           </Routes>
