@@ -27,7 +27,7 @@ function HelloWorld() {
     if (!isLoaded) {
         return (<>Loading...</>);
     } else {
-        return (<>{hello}</>);
+        return (<div data-testid="hello">{hello}</div>);
     };
 };
 
