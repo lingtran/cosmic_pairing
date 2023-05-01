@@ -1,6 +1,6 @@
 black
 flake8
-Flask==2.0.3
+Flask==2.3.2
 Flask-Cors==3.0.7
 flask_sqlalchemy
 pre-commit
