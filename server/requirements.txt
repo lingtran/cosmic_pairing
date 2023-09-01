@@ -1,9 +1,0 @@
-black
-flake8
-Flask==2.0.3
-Flask-Cors==3.0.7
-flask_sqlalchemy
-pre-commit
-psycopg2
-psycopg2-binary
-python-dotenv
