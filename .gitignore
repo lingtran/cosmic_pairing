@@ -3,3 +3,11 @@
 .idea/
 files/
 vue-stuff/
+
+*/log/*
+*/tmp/*
+*/tmp/pids/*
+*/storage/*
+/tmp/storage/*
+*/.bundle
+*/config/master.key
