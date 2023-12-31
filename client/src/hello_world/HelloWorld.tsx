@@ -6,7 +6,7 @@ function HelloWorld() {
     const [hello, setHello] = useState('');
 
     useEffect(() => {
-        fetch("http://localhost:5000/test")
+        fetch("http://localhost:3000/api/v1/test")
             .then(res => res.json())
             .then(
                 (data) => {

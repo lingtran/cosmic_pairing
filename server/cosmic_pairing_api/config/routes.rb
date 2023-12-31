@@ -7,4 +7,16 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  allow do
+    # TODO: this is temp - need to actually configure
+    origins 'http://localhost:3006'
+    namespace :api do
+      namespace :v1 do
+        get 'test', to: 'test#index'
+      end
+    end
+  end
 end
+
+# rails generate controller api/v1/Recipes index create show destroy -j=false -y=false --skip-template-engine --no-helper
