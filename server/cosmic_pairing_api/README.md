@@ -23,11 +23,11 @@ Test connection from `/server/cosmic_pairing_api`
 ### Create database
 From root of api directory
 
-#### `bundle exec rails db:create`
+#### `bin/rails db:create`
 
 ## Start API server
 
-### `bundle exec rails s`
+### `bin/rails s`
 
 ### visit `localhost:3000`
 
