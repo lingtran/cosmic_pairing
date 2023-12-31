@@ -28,7 +28,7 @@ npm install
 ```
 npm start
 ```
-Runs on [http://localhost:3000](http://localhost:3000)
+Runs on [http://localhost:3006](http://localhost:3006)
 
 ### Compiles and minifies for production
 ```
