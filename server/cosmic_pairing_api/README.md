@@ -29,7 +29,8 @@ From root of api directory
 
 ### `bin/rails s`
 
-### visit `localhost:3000`
+### visit `localhost:3000/test`
+> Should see text "Hello, world! Let the cosmos pair"
 
 ===
 

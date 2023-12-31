@@ -6,12 +6,12 @@ function Ping() {
     const [pong, setPong] = useState('');
 
     useEffect(() => {
-        fetch("http://localhost:5000/ping")
+        fetch("http://localhost:3000/api/v1/ping")
             .then(res => res.json())
             .then(
                 (data) => {
                     setIsLoaded(true);
-                    setPong(data);
+                    setPong(data?.result);
                 },
                 (error) => {
                     setIsLoaded(true);

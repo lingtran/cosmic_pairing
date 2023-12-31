@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'test', to: 'test#index'
+      get 'ping', to: 'test#ping'
     end
   end
 end
