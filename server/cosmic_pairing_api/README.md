@@ -32,6 +32,11 @@ From root of api directory
 ### visit `localhost:3000/test`
 > Should see text "Hello, world! Let the cosmos pair"
 
+## Tips
+### Create controller only
+
+`bin/rails g controller api/v1/${RESOURCE_NAME} ${action} -T -j=false -y=false --skip-template-engine --no-helper`
+
 ===
 
 This README would normally document whatever steps are necessary to get the

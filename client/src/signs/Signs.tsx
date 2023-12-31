@@ -47,7 +47,7 @@ function Signs() {
     const [signs, setSigns] = useState<SignsResponse>([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/signs")
+        fetch("http://localhost:3000/api/v1/signs")
             .then(res => res.json())
             .then(
                 (data) => {
