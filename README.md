@@ -15,13 +15,11 @@ Want to explore the option of matching with a pair by way of the cosmos. Why not
 ### Server-side dependencies
 
 ```
-Python 3.10
+ruby-3.0.0
 
-pyenv 2.1.0
+Rails 7.1.2
 
-Flask 2.0.3
-
-Flask-Cors 3.0.7
+RVM 1.29.12
 ```
 
 *Follow setup instructions in [/server/README.md](server/README.md)*
