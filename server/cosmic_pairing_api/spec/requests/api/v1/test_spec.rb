@@ -1,20 +1,19 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Api::V1::TestController, type: :request do
   describe "GET /" do
     it "has 200 status code" do
-      get '/api/v2/test'
+      get "/api/v2/test"
       expect(response.status).to eq 200
     end
   end
 
   describe "GET /ping" do
     before do
-      get '/api/v1/ping'
+      get "/api/v1/ping"
     end
 
     it "has :ok https status" do
-      binding.b
       expect(response).to have_http_status :ok
     end
 
