@@ -2,7 +2,9 @@
 
 ### Intention
 
-To learn Python/Flask and React by attempting to build a progressive web app.
+To practice more rigorous algorithmic thinking, get re-acquainted with Ruby/Rails and React by attempting to build a progressive web app.
+
+Tracking experience in wiki page [Learning Journey](https://github.com/lingtran/cosmic_pairing/wiki/Learning-Journey).
 
 ### Concept Inspo
 
