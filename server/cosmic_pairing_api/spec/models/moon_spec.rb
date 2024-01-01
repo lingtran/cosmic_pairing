@@ -1,15 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe Celestial, type: :model do
+RSpec.describe Moon, type: :model do
   describe "validations" do
-    subject { build(:celestial) }
+    subject { build(:moon) }
 
-    it "validates the celestial" do
+    it "validates the moon" do
       expect(subject).to be_valid
     end
 
-    it "defaults type to Planet" do
-      expect(subject.type).to eq "Planet"
+    it "returns type as Moon" do
+      expect(subject.type).to eq "Moon"
     end
 
     context "name" do

@@ -1,0 +1,2 @@
+class Moon < Celestial
+end
