@@ -22,7 +22,9 @@ class PopulateSigns < ActiveRecord::Migration[7.1]
   end
 
   def down
-    MigrationSigns.delete_all
+    signs.each do |sign|
+      MigrationSigns.delete_by(name: sign[:name])
+    end
   end
 
   private 
