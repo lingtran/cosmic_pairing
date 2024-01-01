@@ -122,7 +122,9 @@ See more [commands for running specs](https://github.com/rspec/rspec-rails#runni
 
 ### Create controller only
 
-`bin/rails g controller api/v1/${RESOURCE_NAME} ${action} -T -j=false -y=false --skip-template-engine --no-helper`
+`bin/rails g controller api/v1/${RESOURCE_NAME} ${action} -j=false -y=false --skip-template-engine --no-helper`
+
+Add `-T` to skip generating tests
 
 ---
 
