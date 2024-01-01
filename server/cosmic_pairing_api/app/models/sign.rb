@@ -1,10 +1,9 @@
 class Sign < ApplicationRecord
-    enum :element, [:air, :earth, :fire, :water], validate: {presence: true, allow_nil: false}
-    enum :modality, [:cardinal, :fixed, :mutable], validate: {presence: true, allow_nil: false}
-    validates :name, presence: true
+  enum :element, [:air, :earth, :fire, :water], validate: {presence: true, allow_nil: false}
+  enum :modality, [:cardinal, :fixed, :mutable], validate: {presence: true, allow_nil: false}
+  validates :name, presence: true
 
-    def self.get_all
-        all.select(:id, :name, :element, :modality)
-    end
-
+  def self.get_all
+    all.select(:id, :name, :element, :modality)
+  end
 end
