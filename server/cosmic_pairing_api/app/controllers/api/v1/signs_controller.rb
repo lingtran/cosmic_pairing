@@ -1,10 +1,10 @@
 class Api::V1::SignsController < ApplicationController
   def index
-    render json: { signs: signs }.to_json, status: :ok
+    render json: {signs: signs}.to_json, status: :ok
   end
 
   private
-  
+
   CARDINAL = "CARDINAL"
   FIXED = "FIXED"
   MUTABLE = "MUTABLE"
@@ -13,9 +13,9 @@ class Api::V1::SignsController < ApplicationController
   EARTH = "EARTH"
   AIR = "AIR"
   WATER = "WATER"
-  
+
   def signs
-    return [
+    [
       {
         id: 1,
         name: "aries",

@@ -73,6 +73,15 @@ postgres=# CREATE DATABASE <see env file for name>;  #if database does not exist
 postgres=# \l  #to verify database created successfully
 ```
 
+### `bin/rails db:migrate`
+Run migration
+
+### `standardrb`
+Linter
+
+### `standardrb --fix`
+Lint and apply fixes
+
 ### <hold: run tests>
 
 ---
