@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :planet, class: "Planet" do
+  factory :celestial, class: "Celestial" do
     name { Faker::Space.planet }
   end
 end

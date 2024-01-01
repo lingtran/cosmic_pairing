@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe Planet, type: :model do
+RSpec.describe Celestial, type: :model do
   describe "validations" do
-    subject { build(:planet) }
+    subject { build(:celestial) }
 
     it "validates the planet" do
       expect(subject).to be_valid
