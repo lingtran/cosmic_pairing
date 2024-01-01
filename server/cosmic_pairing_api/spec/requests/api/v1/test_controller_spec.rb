@@ -24,7 +24,7 @@ RSpec.describe Api::V1::TestController, type: :request do
       expect(response).to have_http_status :ok
     end
 
-   it "returns success response" do
+    it "returns success response" do
       expect(response.body).to eq({result: "pong!"}.to_json)
     end
   end
