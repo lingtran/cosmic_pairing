@@ -73,7 +73,14 @@ RSpec.configure do |config|
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
   config.include(Shoulda::Matchers::ActionController, type: :request)
 
-  DatabaseCleaner.strategy = :truncation
-  # then, whenever you need to clean the DB
-  DatabaseCleaner.clean
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.around(:each) do |example|
+    DatabaseCleaner.cleaning do
+      example.run
+    end
+  end
 end

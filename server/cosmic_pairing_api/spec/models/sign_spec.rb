@@ -46,9 +46,7 @@ RSpec.describe Sign, type: :model do
   describe "#get_all" do
     it "returns all elements" do
       create(:sign)
-
       result = Sign.get_all
-
       expect(result.length).to be 1
     end
   end

@@ -1,4 +1,6 @@
 class Sign < ApplicationRecord
+  include ActiveModel::Serialization
+
   enum :element, [:air, :earth, :fire, :water]
   enum :modality, [:cardinal, :fixed, :mutable]
 
@@ -7,6 +9,7 @@ class Sign < ApplicationRecord
   validates :name, presence: true, allow_nil: false, allow_blank: false
 
   def self.get_all
-    all.select(:id, :name, :element, :modality)
+    attributes = [:id, :name, :element, :modality]
+    all.as_json(only: attributes)
   end
 end

@@ -104,6 +104,8 @@ Lint and apply fixes
 ### `bin/rspec`*
 Run all spec files
 
+If for some reason `Rails.env.test?` returns `false`, the quickest workaround is passing in the env as such `RAILS_ENV='test' bin/rspec`
+
 ### *May need to generate a binstub
 Run `bundle binstubs rspec-core` to enable using `bin/rspec`
 
