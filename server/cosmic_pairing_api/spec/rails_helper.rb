@@ -71,6 +71,7 @@ RSpec.configure do |config|
   # shoulda-matchers configuration
   config.include(Shoulda::Matchers::ActiveModel, type: :model)
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
+  config.include(Shoulda::Matchers::ActionController, type: :request)
 
   DatabaseCleaner.strategy = :truncation
   # then, whenever you need to clean the DB
