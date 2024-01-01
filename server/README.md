@@ -74,7 +74,24 @@ postgres=# \l  #to verify database created successfully
 ```
 
 ### `bin/rails db:migrate`
-Run migration
+Migrate schema only
+
+### `bin/rails data:migrate`
+Migrate database data only
+
+### `bin/rails db:migrate:with_data`
+Migrate both schema and database data
+
+See rake tasks available [here](https://github.com/ilyakatz/data-migrate#rake-tasks)
+
+### `bin/rails db:version`
+Get current schema version
+
+### `bin/rails data:version`
+Get current schema version for data migrations
+
+### `bin/rails db:version:with_data`
+Get both schema and data migration versions
 
 ### `standardrb`
 Linter

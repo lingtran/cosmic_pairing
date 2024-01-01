@@ -1,18 +1,5 @@
 class Sign < ApplicationRecord
-    enum element: {
-        air: 0,
-        earth: 1,
-        fire: 2,
-        water: 3
-    }
-
-    enum modality: {
-        cardinal: 0,
-        fixed: 1,
-        mutable: 2
-    }
-
-    validates :element, presence: true
-    validates :modality, presence: true
+    enum :element, [:air, :earth, :fire, :water], validate: {presence: true, allow_nil: false}
+    enum :modality, [:cardinal, :fixed, :mutable], validate: {presence: true, allow_nil: false}
     validates :name, presence: true
 end

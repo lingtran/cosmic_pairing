@@ -84,6 +84,9 @@ GEM
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     crass (1.0.6)
+    data_migrate (9.2.0)
+      activerecord (>= 6.1)
+      railties (>= 6.1)
     date (3.3.4)
     debug (1.9.1)
       irb (~> 1.10)
@@ -237,6 +240,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  data_migrate
   debug
   pg (~> 1.1)
   puma (>= 5.0)
