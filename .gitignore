@@ -11,3 +11,5 @@ vue-stuff/
 /tmp/storage/*
 */.bundle
 */config/master.key
+
+*.pem

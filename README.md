@@ -17,7 +17,7 @@ Want to explore the option of matching with a pair by way of the cosmos. Why not
 ### Server-side dependencies
 
 ```
-ruby-3.0.0
+ruby-3.0.5
 
 Rails 7.1.2
 

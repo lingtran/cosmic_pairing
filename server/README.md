@@ -6,7 +6,7 @@ This is the server-side app for Cosmic Pairing. See [/client/README.md](/client/
 `Rails 7.1.2`
 
 ## Ruby version
-`ruby-3.0.0`
+`ruby-3.0.5`
 
 See `.ruby-version` file for info
 
@@ -99,7 +99,21 @@ Linter
 ### `standardrb --fix`
 Lint and apply fixes
 
-### <hold: run tests>
+### Run tests
+
+### `bin/rspec`*
+Run all spec files
+
+### *May need to generate a binstub
+Run `bundle binstubs rspec-core` to enable using `bin/rspec`
+
+This is an **optional** alternative to default `bundle exec rspec`
+
+### `bin/rspec ${relative file path}`
+Run single spec file
+
+See more [commands for running specs](https://github.com/rspec/rspec-rails#running-specs)
+
 
 ---
 ## Workflow tips
