@@ -1,18 +1,8 @@
 # frozen_string_literal: true
 
 class PopulateSigns < ActiveRecord::Migration[7.1]
-
   class MigrationSigns < ApplicationRecord
     self.table_name = "signs"
-
-    CARDINAL = :cardinal
-    FIXED = :fixed
-    MUTABLE = :mutable
-
-    FIRE = :fire
-    EARTH = :earth
-    AIR = :air
-    WATER = :water
   end
 
   def up
@@ -23,73 +13,76 @@ class PopulateSigns < ActiveRecord::Migration[7.1]
 
   def down
     signs.each do |sign|
-      MigrationSigns.delete_by(name: sign[:name])
+      MigrationSigns.find_by(name: sign[:name])&.destroy
     end
   end
 
-  private 
+  private
+
+  MODALITIES = {cardinal: 0, fixed: 1, mutable: 2}.freeze
+  ELEMENTS = {air: 0, earth: 1, fire: 2, water: 3}.freeze
 
   def signs
     [
       {
         name: "aries",
-        modality: MigrationSigns::CARDINAL,
-        element: MigrationSigns::FIRE
+        modality: MODALITIES[:cardinal],
+        element: ELEMENTS[:fire]
       },
       {
         name: "taurus",
-        modality: MigrationSigns::FIXED,
-        element: MigrationSigns::EARTH
+        modality: MODALITIES[:fixed],
+        element: ELEMENTS[:earth]
       },
       {
         name: "gemini",
-        modality: MigrationSigns::MUTABLE,
-        element: MigrationSigns::AIR
+        modality: MODALITIES[:mutable],
+        element: ELEMENTS[:air]
       },
       {
         name: "cancer",
-        modality: MigrationSigns::CARDINAL,
-        element: MigrationSigns::WATER
+        modality: MODALITIES[:cardinal],
+        element: ELEMENTS[:water]
       },
       {
         name: "leo",
-        modality: MigrationSigns::FIXED,
-        element: MigrationSigns::FIRE
+        modality: MODALITIES[:fixed],
+        element: ELEMENTS[:fire]
       },
       {
         name: "virgo",
-        modality: MigrationSigns::MUTABLE,
-        element: MigrationSigns::EARTH
+        modality: MODALITIES[:mutable],
+        element: ELEMENTS[:earth]
       },
       {
         name: "libra",
-        modality: MigrationSigns::CARDINAL,
-        element: MigrationSigns::AIR
+        modality: MODALITIES[:cardinal],
+        element: ELEMENTS[:air]
       },
       {
         name: "scorpio",
-        modality: MigrationSigns::FIXED,
-        element: MigrationSigns::WATER
+        modality: MODALITIES[:fixed],
+        element: ELEMENTS[:water]
       },
       {
         name: "sagittarius",
-        modality: MigrationSigns::MUTABLE,
-        element: MigrationSigns::FIRE
+        modality: MODALITIES[:mutable],
+        element: ELEMENTS[:fire]
       },
       {
         name: "capricorn",
-        modality: MigrationSigns::CARDINAL,
-        element: MigrationSigns::EARTH
+        modality: MODALITIES[:cardinal],
+        element: ELEMENTS[:earth]
       },
       {
         name: "aquarius",
-        modality: MigrationSigns::FIXED,
-        element: MigrationSigns::AIR
+        modality: MODALITIES[:fixed],
+        element: ELEMENTS[:air]
       },
       {
         name: "pisces",
-        modality: MigrationSigns::MUTABLE,
-        element: MigrationSigns::WATER
+        modality: MODALITIES[:mutable],
+        element: ELEMENTS[:water]
       }
     ]
   end
