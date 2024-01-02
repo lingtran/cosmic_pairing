@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_02_065520) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_02_075328) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -56,6 +56,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_02_065520) do
     t.integer "element"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "ruling_celestial_id"
+    t.index ["ruling_celestial_id"], name: "index_signs_on_ruling_celestial_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -70,4 +72,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_02_065520) do
   add_foreign_key "natal_charts", "users"
   add_foreign_key "natal_placements", "celestial_signs"
   add_foreign_key "natal_placements", "natal_charts"
+  add_foreign_key "signs", "celestials", column: "ruling_celestial_id"
 end
