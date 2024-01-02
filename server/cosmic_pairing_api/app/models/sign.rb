@@ -1,6 +1,9 @@
 class Sign < ApplicationRecord
   include ActiveModel::Serialization
 
+  has_many :celestial_signs
+  has_many :celestials, through: :celestial_signs
+
   enum :element, [:air, :earth, :fire, :water]
   enum :modality, [:cardinal, :fixed, :mutable]
 
