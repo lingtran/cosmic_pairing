@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_02_064436) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_02_065520) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,6 +41,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_02_064436) do
     t.index ["user_id"], name: "index_natal_charts_on_user_id"
   end
 
+  create_table "natal_placements", force: :cascade do |t|
+    t.bigint "natal_chart_id", null: false
+    t.bigint "celestial_sign_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["celestial_sign_id"], name: "index_natal_placements_on_celestial_sign_id"
+    t.index ["natal_chart_id"], name: "index_natal_placements_on_natal_chart_id"
+  end
+
   create_table "signs", force: :cascade do |t|
     t.string "name"
     t.integer "modality"
@@ -59,4 +68,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_02_064436) do
   add_foreign_key "celestial_signs", "celestials"
   add_foreign_key "celestial_signs", "signs"
   add_foreign_key "natal_charts", "users"
+  add_foreign_key "natal_placements", "celestial_signs"
+  add_foreign_key "natal_placements", "natal_charts"
 end
