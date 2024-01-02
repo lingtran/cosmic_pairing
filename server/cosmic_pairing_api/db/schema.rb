@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_02_051558) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_02_052749) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "celestial_signs", force: :cascade do |t|
+    t.integer "essential_dignity"
+    t.bigint "celestial_id", null: false
+    t.bigint "sign_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["celestial_id"], name: "index_celestial_signs_on_celestial_id"
+    t.index ["sign_id"], name: "index_celestial_signs_on_sign_id"
+  end
 
   create_table "celestials", force: :cascade do |t|
     t.string "name", null: false
@@ -32,4 +42,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_02_051558) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "celestial_signs", "celestials"
+  add_foreign_key "celestial_signs", "signs"
 end
