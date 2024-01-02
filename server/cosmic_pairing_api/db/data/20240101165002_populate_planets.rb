@@ -6,13 +6,13 @@ class PopulatePlanets < ActiveRecord::Migration[7.1]
   end
 
   def up
-    planets.each do |planet| 
+    planets.each do |planet|
       MigrationPlanets.create!(name: planet)
     end
   end
 
   def down
-    planets.each do |planet| 
+    planets.each do |planet|
       MigrationPlanets.find_by(name: planet)&.destroy
     end
   end
