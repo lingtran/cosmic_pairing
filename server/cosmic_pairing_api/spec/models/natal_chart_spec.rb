@@ -9,7 +9,7 @@ RSpec.describe NatalChart, type: :model do
 
   describe "association" do
     it { should belong_to(:user).class_name("User") }
-    it { should have_many(:natal_placements).class_name("NatalPlacement") }
-    it { should have_many(:celestial_signs).through(:natal_placements) }
+    it { should have_many(:natal_signs).class_name("NatalSigns") }
+    it { should have_many(:celestial_signs).through(:natal_signs) }
   end
 end

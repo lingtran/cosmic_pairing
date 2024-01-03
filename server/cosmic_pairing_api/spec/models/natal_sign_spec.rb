@@ -1,9 +1,9 @@
 require "rails_helper"
 
-RSpec.describe NatalPlacement, type: :model do
-  subject { build(:natal_placement) }
+RSpec.describe NatalSign, type: :model do
+  subject { build(:natal_sign) }
 
-  it "returns valid natal placement" do
+  it "returns valid natal sign" do
     expect(subject).to be_valid
   end
 
