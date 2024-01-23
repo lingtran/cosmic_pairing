@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get "test", to: "test#index"
       get "ping", to: "test#ping"
       resources :signs, only: [:index]
+      resources :sun_signs, only: [:index]
     end
   end
 end

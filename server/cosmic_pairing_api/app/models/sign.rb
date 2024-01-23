@@ -15,4 +15,12 @@ class Sign < ApplicationRecord
     attributes = [:id, :name, :element, :modality]
     all.as_json(only: attributes)
   end
+
+  def traditional_ruler
+    Celestial.find(ruling_celestial_id)
+  end
+
+  #TODO: populate rulers, dignities
+  #TODO: resolve username uniqueness issue
+  #TODO: seed natal chart, user, natal signs
 end
